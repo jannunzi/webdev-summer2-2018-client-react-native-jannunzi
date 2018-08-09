@@ -27,7 +27,7 @@ const ListExample = () =>
         subtitle={list.subtitle}
         leftIcon={{name: list.icon}}/>
     ))}
-    
+
     <ListItem
       title="Question A"
       leftIcon={{ name: "list" }}

@@ -4,6 +4,7 @@ import FixedHeader from './components/FixedHeader'
 import TextHeadings from './components/TextHeadings'
 import Icons from './components/Icons'
 import ListExample from './components/ListExample'
+import QuestionTypeChooser from './components/QuestionTypeChooser'
 
 export default class App extends React.Component {
   render() {
@@ -12,6 +13,8 @@ export default class App extends React.Component {
         <StatusBar barStyle="light-content"/>
         <FixedHeader/>
         <View style={{padding: 15}}>
+
+          <QuestionTypeChooser/>
 
           <ListExample/>
 

@@ -7,37 +7,43 @@ import ListExample from './components/ListExample'
 import QuestionTypeChooser from './components/QuestionTypeChooser'
 import QuestionTypePicker from './components/QuestionTypePicker'
 import EssayQuestion from './components/EssayQuestion'
+import Home from './components/Home'
+import Login from './components/Login'
+import Registration from './components/Registration'
+import Profile from './components/Profile'
+import {createStackNavigator} from 'react-navigation'
+
+const Navigator = createStackNavigator({
+  Home: {
+    screen: Home,
+    navigationOptions: () => ({
+      title: 'Home'
+    })
+  },
+  Login: {
+    screen: Login,
+    navigationOptions: () => ({
+      title: 'Login'
+    })
+  },
+  Registration: {
+    screen: Registration,
+    navigationOptions: () => ({
+      title: 'Registration'
+    })
+  },
+  Profile: {
+    screen: Profile,
+    navigationOptions: () => ({
+      title: 'Profile'
+    })
+  }
+})
 
 export default class App extends React.Component {
   render() {
     return (
-      <View>
-        <StatusBar barStyle="light-content"/>
-        <FixedHeader/>
-        <View style={{padding: 15}}>
-
-          <EssayQuestion/>
-
-          <QuestionTypePicker/>
-
-          <QuestionTypeChooser/>
-
-          <ListExample/>
-
-          <TextHeadings/>
-          <Icons/>
-        </View>
-        {/*<Text>Hello world from webdev summer 2 2018</Text>*/}
-      </View>
+      <Navigator/>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

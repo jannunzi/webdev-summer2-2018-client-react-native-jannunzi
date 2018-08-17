@@ -11,9 +11,23 @@ import Home from './components/Home'
 import Login from './components/Login'
 import Registration from './components/Registration'
 import Profile from './components/Profile'
+import ApplicationList from './components/ApplicationList'
+import ApplicationEditor from './components/ApplicationEditor'
 import {createStackNavigator} from 'react-navigation'
 
 const Navigator = createStackNavigator({
+  ApplicationList: {
+    screen: ApplicationList,
+    navigationOptions: () => ({
+      title: 'Applications'
+    })
+  },
+  ApplicationEditor: {
+    screen: ApplicationEditor,
+    navigationOptions: () => ({
+      title: 'App Editor'
+    })
+  },
   Home: {
     screen: Home,
     navigationOptions: () => ({
